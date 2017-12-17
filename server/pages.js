@@ -1,7 +1,5 @@
 import DB from './DB.js';
 
-DB.set('test', 'wasd')
-
 // Add new url
 function _addUrl(req, res) {
     const short = req.body.shortUrl,
