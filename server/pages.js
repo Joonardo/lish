@@ -6,7 +6,7 @@ DB.set('test', 'wasd')
 function _addUrl(req, res) {
     const short = req.body.shortUrl,
 	  long = req.body.longUrl;
-    
+    console.log(short, long)
     DB.exists(short, function(e) {
 	if(!e) {
 	    DB.set(short, long);
@@ -17,7 +17,6 @@ function _addUrl(req, res) {
 
 // Check short url
 function _check(req, res) {
-    console.log(req.body)
     DB.exists(req.body.shortUrl, function(e) {
 	res.send({exists: e})
     })
