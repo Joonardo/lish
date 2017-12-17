@@ -1,0 +1,13 @@
+{
+  "name": "lish",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "scripts": {
+    "install": "(cd client && yarn) && (cd server && yarn)",
+    "start": "concurrently \"cd client && yarn start\" \"cd server && yarn start\""
+  }
+}
